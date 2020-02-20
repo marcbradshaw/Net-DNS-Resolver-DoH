@@ -23,6 +23,7 @@ sub send {
 sub _defaultdohservers {
   return (
     'https://dns.google/dns-query{dns}',
+    'https://cloudflare-dns.com/dns-query/{dns}',
   );
 }
 
@@ -56,8 +57,6 @@ sub _send_doh {
       'keep_alive' => 0,
     );
     my $response = $http->get( $this_url );
-    use Data::Dumper;
-    warn Dumper $response;
     if ( ! $response->{'success'} ) {
         #        return; #### TODO
     }

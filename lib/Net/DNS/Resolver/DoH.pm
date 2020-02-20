@@ -2,7 +2,7 @@ package Net::DNS::Resolver::DoH;
 use strict;
 use warnings;
 # VERSION
-## ABSTRACT: DNS over HTTPS for Net::DNS::Resolver
+## ABSTRACT: Experimental DNS over HTTPS for Net::DNS::Resolver
 
 use base 'Net::DNS::Resolver';
 
